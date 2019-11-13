@@ -1,0 +1,38 @@
+<html>
+  <body>
+  Hi
+  <% if(username) { %>
+    <h4 id="name"><%= username %></h4>
+  <% } %>
+  <h4>This is the list of files which have been sent to you by other users.</h4>
+  
+  <% if(filesReceivedResults!="") { %>
+    <table class="table table-inverse">
+        <thead>
+          <tr>
+            <th>Sent By</th>
+            <th>File Name</th>
+            <th>Link for download</th>
+    
+          </tr>
+        </thead>
+    
+        <tbody>
+         <% for(var i=0; i < filesReceivedResults.length; i++) { %>
+         <tr>
+           <td><%= filesReceivedResults[i].sender %></td>
+           <td><%= filesReceivedResults[i].fileName %></td>
+           <td><a target="_blank" href=<%= filesReceivedResults[i].filePath %> download=<%= filesReceivedResults[i].filePath %>>Download</a></td>
+         </tr>
+         <% } %>
+        </tbody>
+    
+      </table>
+  <% } else { %>
+    <h5>Currently no files have been sent to this user </h5> 
+  <% } %>
+  <form action="listofusers" method="get">
+    <input type="submit" value="List All Users" name="listofusersbutton">
+  </form>
+  </body>
+</html>

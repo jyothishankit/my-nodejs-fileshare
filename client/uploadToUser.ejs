@@ -1,0 +1,28 @@
+<!---Get The User to whom the file should be sent-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<h1>
+   Choose a file from your system to upload
+   <%=
+    param.uploadUser
+   %>     
+</h1>
+
+<form id="form" action="send" method="post" enctype="multipart/form-data">
+    User to send
+    <input type="text" name="uploadUser" id="uploadUser" readonly="true" value=<%=param.uploadUser%> >
+    <br>
+    Select file to upload:
+    <br>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Song" name="submit">
+    <br>
+</form>
+<button id="redirectHome">Redirect to Home</button>
+<script>
+    $(document).ready(function(){
+        console.log("Button Clicked");
+        $("#redirectHome").click(function(){
+            window.location.href = '/home';
+        });
+    });
+</script>

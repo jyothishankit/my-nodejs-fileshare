@@ -1,0 +1,36 @@
+{
+  "name": "yobam",
+  "version": "1.0.0",
+  "description": "This is a website for uploading and downloading content",
+  "main": "/src/app",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "db-migrate": "^0.11.6",
+    "db-migrate-mongodb": "^1.5.0",
+    "ejs": "^2.6.2",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.3.1",
+    "mongoose": "^5.6.11",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.9.0",
+    "webpack": "^4.39.2",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ankitj",
+  "license": "ISC"
+}

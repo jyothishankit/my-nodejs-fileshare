@@ -1,0 +1,17 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<h1>
+    Hi User <%= sender %>
+    The file was successfully sent to <%= receiver %> 
+    <br>
+    <button id="redirectHome">Redirect to Home</button>
+    <script>
+        $(document).ready(function(){
+            console.log("Button Clicked");
+            $("#redirectHome").click(function(){
+                window.location.href = '/home';
+            });
+        });
+    </script>
+    <br>    
+</h1>
+ 

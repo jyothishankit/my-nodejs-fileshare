@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<html>
+  <title>All users with access to the website</title>
+  <body>
+    <ul>
+      <% user.forEach(function(user) { %>
+        <li><a href="uploadToUser?uploadUser=<%= user.username %>"><%= user.username %></a></li>
+       <% }); %>
+    </ul>
+    <!-- <script>
+      var stillAlive = setInterval(function () {
+        /* XHR back to server
+          Example uses jQuery */
+        $.get("");
+    }, 60000);
+    </script>   -->
+  </body>
+  <button id="redirectHome">Redirect to Home</button>
+  <script>
+      $(document).ready(function(){
+          console.log("Button Clicked");
+          $("#redirectHome").click(function(){
+              window.location.href = '/home';
+          });
+      });
+  </script>
+</html>
